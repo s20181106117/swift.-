@@ -1,0 +1,19 @@
+//逆转数组
+var strs = ["3","a","8","haha","100","hello"]
+//算法
+/*
+   0   5  index count-index=1
+   1   4
+   2   3
+ */
+for(index,item)in strs.enumerated(){
+    if index < strs.count / 2{
+        var temp = ""
+        temp = strs[index]
+        strs[index] = strs[strs.count - index - 1]
+        strs[strs.count - index - 1] = temp
+    }
+}
+for item in strs{
+    print(item)
+}
